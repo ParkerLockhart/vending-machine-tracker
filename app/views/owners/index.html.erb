@@ -1,7 +1,10 @@
 <h1>Vending Machine Owners</h1>
 
-<ul>
+
   <% @owners.each do |owner| %>
-    <li><%= owner.name %></li>
+    <h3><%= owner.name %></h3>
+    <% owner.machines.each do |machine| %>
+      <%= link_to "#{machine.location}", "/machines/#{machine.id}" %><br>
+    <% end %>
+    <hr>
   <% end %>
-</ul>

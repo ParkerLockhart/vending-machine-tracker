@@ -1,1 +1,7 @@
 <h1><%= @machine.location %> Vending Machine</h1>
+<h3>Snacks</h3>
+<% @snacks.each do |snack| %>
+  * <%= snack.name %>:
+  $<%= snack.price %><br>
+<% end %><br>
+Average price: $<%= @machine.avg_price %>
